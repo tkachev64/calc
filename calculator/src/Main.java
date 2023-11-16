@@ -7,17 +7,18 @@ public class Main {
         String[] strings = string.split(" ");
         int num1 = Integer.parseInt(strings[0]);
         int num2 = Integer.parseInt(strings[2]);
-        String sinc = strings[1];
+        String sin = strings[1];
         int res = 0;
-        if (num1 > 10 || num2 > 10 || num1 < 1 || num2 < 1) {
+        if (num1 > 10 || num2 > 10 || num1 < 1 || num2 < 1 || strings.length!=3) {
             throw new Exception();
-        } else if (sinc.equals("+")) {
+        }
+        else if (sin.equals("+")) {
             res = num1 + num2;
-        } else if (sinc.equals("-")) {
+        } else if (sin.equals("-")) {
             res = num1 - num2;
-        } else if (sinc.equals("*")) {
+        } else if (sin.equals("*")) {
             res = num1 * num2;
-        } else if (sinc.equals("/")) {
+        } else if (sin.equals("/")) {
             res = num1 / num2;
         } else {
             throw new Exception();
